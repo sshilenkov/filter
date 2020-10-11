@@ -1,0 +1,103 @@
+.card
+    display: flex
+    flex-direction: column
+    padding: 25px 25px 30px
+    border: 1px solid #EAEAEA
+    border-radius: 15px
+
+    &:not(:last-child)
+        margin-bottom: 15px
+
+    & > div
+        display: flex
+        align-items: center
+
+.card__head
+    color: #3A3A3A
+    justify-content: space-between
+    margin-bottom: 3px
+    line-height: 1
+
+.card__title
+    font-size: 20px
+    font-weight: 700
+
+.card__price
+    font-size: 25px
+    font-weight: 700
+
+.card__info
+    margin-bottom: 15px
+    color: #868686
+    font-size: 14px
+    line-height: 1
+
+.card__stars
+    margin-right: 15px
+
+.card__star
+    &:not(:last-child)
+        margin-right: 6px
+
+.card__star--starred
+    & path
+        fill: #FFA900
+
+.card__type
+    &::after
+        content: '•'
+        display: inline-block
+        margin: 0 6px
+
+.card__reviews
+    margin-right: 15px
+
+.card__location
+    color: #3A3A3A
+
+.card__location-icon
+    margin-right: 8px
+    transform: translateY(2px)
+
+.card__price-info
+    margin-left: auto
+    font-size: 12px
+
+.card__footer
+    justify-content: space-between
+
+.card__description
+    max-width: 560px
+    font-size: 16px
+    line-height: 1.5
+
+.card__reservation
+    width: 180px
+    height: 40px
+    border: none
+    border-radius: 12px
+    background-color: rgba(#6A53F5, 0.1)
+    color: #6A53F5
+    font-size: 14px
+    outline: none
+
+    &:hover
+        cursor: pointer
+
+    &::before
+        content: ''
+        display: inline-block
+        width: 15px
+        height: 12px
+        margin-right: 10px
+        background-image: url(./calendar.svg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+
+.card__reservation--reserved
+    background-color: rgba(#00BB6D, 0.1)
+    color: #00BB6D
+
+    &::before
+        background-image: url(./check.svg)

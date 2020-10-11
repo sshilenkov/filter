@@ -1,0 +1,53 @@
+.checkbox
+    &:not(:last-child)
+        margin-bottom: 15px
+
+.checkbox--type
+    position: relative
+    padding-bottom: 15px
+
+    &::after
+        content: ''
+        position: absolute
+        right: 0
+        bottom: 0
+        left: 0
+        display: block
+        height: 1px
+        background-color: #EAEAEA
+    
+.checkbox-hidden
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+    &:hover
+        cursor: pointer
+
+.checkbox-hidden + label
+    display: inline-flex
+    align-items: center
+    user-select: none
+
+    &:hover
+        cursor: pointer
+    
+    &::before
+        content: ''
+        flex-shrink: 0
+        flex-grow: 0
+        display: inline-block
+        width: 18px
+        height: 18px
+        border: 1px solid #adb5bd
+        border-radius: 4px
+        margin-right: 11px
+        background-color: #fff
+        background-image: url(./mark.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: auto
+
+.checkbox-hidden:checked+label::before
+    border-color: #00BB6D
+    background-color: #00BB6D
