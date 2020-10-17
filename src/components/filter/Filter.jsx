@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './Filter.sass';
 
 import Countries from 'components/countries/Countries';
@@ -7,9 +8,16 @@ import Stars from 'components/stars/Stars';
 import Reviews from 'components/reviews/Reviews';
 import Price from 'components/price/Price';
 import Card from 'components/card/Card';
-import hotelsList from 'api/hotels.json';
+
+import { applyFilter, resetFilter } from 'store/actions';
 
 const Filter = () => {
+  const dispatch = useDispatch();
+  const hotels = useSelector(state => state.hotels);
+
+  const applyFltr = () => dispatch(applyFilter());
+  const clearFilter = () => dispatch(resetFilter());
+
   return (
     <div className='filter'>
       <div className='filter__sidebar'>
@@ -18,11 +26,11 @@ const Filter = () => {
         <Stars />
         <Reviews />
         <Price />
-        <button className="filter__button filter__button--apply">Применить фильтр</button>
-        <button className="filter__button filter__button--clear">Очистить фильтр</button>
+        <button onClick={applyFltr} className="filter__button filter__button--apply">Применить фильтр</button>
+        <button onClick={clearFilter} className="filter__button filter__button--clear">Очистить фильтр</button>
       </div>
       <div className='filter__content'>
-        {hotelsList.map(hotel => <Card hotel={hotel} key={hotel.id} />)}
+        {hotels.map(hotel => <Card hotel={hotel} key={hotel.id} />)}
       </div>
     </div>
   );

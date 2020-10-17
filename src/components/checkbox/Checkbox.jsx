@@ -3,7 +3,7 @@ import './Checkbox.sass';
 
 import classNames from 'classnames';
 
-const Checkbox = ({ className, id, text, onClick }) => {
+const Checkbox = ({ className, id, text, onClick, isChecked }) => {
     const checkboxClasses = classNames(
         'checkbox',
         className
@@ -11,7 +11,13 @@ const Checkbox = ({ className, id, text, onClick }) => {
 
     return (
         <div className={checkboxClasses}>
-            <input onClick={onClick} type='checkbox' className='checkbox-hidden' id={id} />
+            <input
+                onChange={onClick()}
+                type='checkbox'
+                className='checkbox-hidden'
+                id={id}
+                checked={isChecked(id)}
+            />
             <label htmlFor={id}>{text}</label>
         </div>
     );

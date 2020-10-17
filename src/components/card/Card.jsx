@@ -22,17 +22,19 @@ const Card = ({ hotel }) => {
         { 'card__reservation--reserved': reserveBtn }
     );
 
+    const hotelStars = Number(hotel.stars.charAt(0));
+
     return (
         <div className='card'>
             <div className="card__head">
                 <div className="card__title">{hotel.name}</div>
-                <div className="card__price">{hotel.price} ₽</div>
+                <div className="card__price">{(hotel.price).toLocaleString('ru')} ₽</div>
             </div>
             <div className="card__info">
                 <div className="card__stars">
                 {
                     [0,1,2,3,4].map((itm, idx) => {
-                        if (idx < hotel.stars) {
+                        if (idx < hotelStars) {
                             return <Star className='card__star card__star--starred' key={idx} />
                         } else {
                             return <Star className='card__star' key={idx} />
