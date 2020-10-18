@@ -22,7 +22,7 @@ const Stars = () => {
                 <Checkbox onClick={() => setStars} isChecked={isSelected} id='2stars' text='2 звезды' />
                 <Checkbox onClick={() => setStars} isChecked={isSelected} id='3stars' text='3 звезды' />
                 <Checkbox onClick={() => setStars} isChecked={isSelected} id='4stars' text='4 звезды' />
-                <Checkbox onClick={() => setStars} isChecked={isSelected} id='5stars' text='5 звезды' />
+                <Checkbox onClick={() => setStars} isChecked={isSelected} id='5stars' text='5 звезд' />
             </div>
         </div>
     );

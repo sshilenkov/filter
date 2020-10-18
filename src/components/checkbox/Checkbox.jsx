@@ -18,7 +18,7 @@ const Checkbox = ({ className, id, text, onClick, isChecked }) => {
                 id={id}
                 checked={isChecked(id)}
             />
-            <label htmlFor={id}>{text}</label>
+            <label htmlFor={id} title={text}>{text}</label>
         </div>
     );
 }
