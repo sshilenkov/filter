@@ -8,4 +8,3 @@ export const rangeSetPriceLimit = (value) => ({ type: 'RANGE_SET_PRICE_LIMIT', v
 export const resetFilter = () => ({ type: 'RESET_FILTER' });
 export const applyFilter = () => ({ type: 'APPLY_FILTER' });
 export const selectPage = (pageNumber) => ({ type: 'CLICK_PAGE', pageNumber });
-// export const nextPage = () => ({ type: 'NEXT_PAGE' });

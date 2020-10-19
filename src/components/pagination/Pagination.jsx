@@ -30,17 +30,6 @@ const Pagination = () => {
                     pageLinkClassName={'pagination__page-link'}
                     activeLinkClassName={'pagination__page-link--active'}
                 />
-
-        // return (
-        //     <div className="pagination">
-        //         <button onClick={prevPage} className="pagination__button">
-        //             Назад
-        //         </button>
-        //         <button onClick={nxtPage} className="pagination__button pagination__button--next">
-        //             Следующая
-        //         </button>
-        //     </div>
-        // );
     } else return false;
 }
 

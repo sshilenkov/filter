@@ -173,13 +173,6 @@ const reducer = (state = initialState, actions, clearState = resetState) => {
                 currentPage: actions.pageNumber
             }
 
-        // case 'NEXT_PAGE':
-        //     const nextPage = state.currentPage + 1;
-        //     return {
-        //         ...state,
-        //         currentPage: nextPage
-        //     }
-
         default:
             return state;
     }
